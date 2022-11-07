@@ -16,7 +16,7 @@ int main()
     return 0;  
 }  
   
-void sucet(int x, int y, int *z)  
+void sucet(int x, int y, int *sucet)  
 {  
-    *z = x + y;  
+    *sucet = x + y;  
 }
