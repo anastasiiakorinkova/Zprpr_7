@@ -1,49 +1,39 @@
-#include <stdio.h> 
-#include <stdlib.h> 
+#include <stdio.h>
+#include <stdlib.h>
 
-void vytvorPole(int cis, int* arr) {
+void vytvorPole(int cis, int *arr)
+{
+    int baseNumber = (cis % 2) ? 73 : 32;
 
-
-    if (cis % 2) {
-        for (int i = 0; i < 5; i++) {
-
-            arr[i] = 73 + (i * 2);
-        }
-
-    }
-    else {
-
-        for (int i = 0; i < 5; i++) {
-            arr[i] = 32 + (i * 2);
-
-        }
-    }
+    for (int i = 0; i < 5; i++)
+        arr[i] = baseNumber + (i * 2);
 }
 
-
-
-int main() {
+int main()
+{
     int cis;
 
     printf("Zadajte cislo \n");
-    scanf_s("%d", &cis);
+    scanf("%d", &cis);
 
-    int* arr;
-    arr = (int*)malloc(5 * sizeof(int));
+    if (cis == 0)
+    {
+        printf("Cislo nie je ani parne, ani neparne\n");
+        exit(0);
+    }
+
+    int *arr;
+    arr = (int *)calloc(5, sizeof(int));
+
+    if (arr == NULL)
+    {
+        printf("Pamat na poznamky je pridelena.\n");
+        exit(0);
+    }
 
     vytvorPole(cis, arr);
-
-    if (cis == 0) {
-        printf("Cislo nie je ani parne, ani neparne\n");
-
-    }
-
-    else {
-        for (int i = 0; i < 5; i++) {
-
-            printf("%d\n", arr[i]);
-        }
-    }
+    for (int i = 0; i < 5; i++)
+        printf("%d\n", arr[i]);
 
     return 0;
 }
