@@ -1,15 +1,8 @@
 #include <stdio.h>
 
-void multiplicate(int a, int* b, int* s) {
-    printf("Zadaj 2. cislo: \n");
-    scanf("%d", b);
+void multiplicate(int, int*, int*); 
 
-    *s = a * (*b);
-}
-
-void result(int s) {
-    printf("Vysledok je: %d", s);
-}
+void result(int); 
 
 int main() {
     int a, b, s;
@@ -21,4 +14,14 @@ int main() {
 
     result(s);
     return 0;
+}
+
+void multiplicate(int a, int* b, int* s) {
+    printf("Zadaj 2. cislo: \n");
+    scanf("%d", b);
+    *s = a * *b;
+}
+
+void result(int s) {
+    printf("Vysledok je: %d", s);
 }
