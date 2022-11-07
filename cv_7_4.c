@@ -1,12 +1,7 @@
 #include <stdio.h>
 
-void swap(int *ap, int *bp)
-{
-    int temp = *ap;
-    *ap = *bp;
-    *bp = temp;
-}
- 
+void prehod(int*, int*);
+
 int main()
 {
     int a, b;
@@ -14,7 +9,14 @@ int main()
     scanf("%d", &a);
     printf("\nZadaj hodnotu premennej b: \n");
     scanf("%d", &b);
-    swap(&a, &b);
+    prehod(&a, &b);
     printf("\nHodnota a:%d, b:%d", a, b);
     return 0;
+}
+
+void prehod(int *a, int *b)
+{
+    int temp = *a;
+    *a = *b;
+    *b = temp;
 }
