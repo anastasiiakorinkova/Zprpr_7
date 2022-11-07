@@ -8,7 +8,7 @@ void multiplicate(int a, int* b, int* s) {
 }
 
 void result(int s) {
-    printf("Vysledok je:%d", s);
+    printf("Vysledok je: %d", s);
 }
 
 int main() {
