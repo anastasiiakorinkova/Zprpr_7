@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 void multiplicate(int a, int* b, int* s) {
-    printf("Zadaj 2 cislo = ");
+    printf("Zadaj 2. cislo \n");
     scanf("%d", b);
 
     *s = a * (*b);
@@ -14,7 +14,7 @@ void result(int s) {
 int main() {
     int a, b, s;
 
-    printf("Zadaj 1 cislo  = ");
+    printf("Zadaj 1. cislo \n");
     scanf("%d", &a);
 
     multiplicate(a, &b, &s);
