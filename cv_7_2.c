@@ -34,6 +34,8 @@ int main()
     vytvorPole(cis, arr);
     for (int i = 0; i < 5; i++)
         printf("%d\n", arr[i]);
+        
+        free(arr);
 
     return 0;
 }
